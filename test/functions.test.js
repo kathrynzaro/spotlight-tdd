@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { multiplyBySeven, myFunction } from '../functions.js';
+import { divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, myFunction } from '../functions.js';
 
 const { test, skip } = QUnit;
 
@@ -30,6 +30,22 @@ test('multiply by 7', (expect) => {
     const expected = 28;
 
     const actual = multiplyBySeven(4);
+
+    expect.equal(actual, expected);
+});
+
+test('multiply by 12 then halve', (expect) => {
+    const expected = 6;
+
+    const actual = multiplyBy12ThenHalve(1);
+
+    expect.equal(actual, expected);
+});
+
+test('divide then multiply', (expect) => {
+    const expected = 4;
+
+    const actual = divideThenMultiply(4, 2, 2);
 
     expect.equal(actual, expected);
 });
